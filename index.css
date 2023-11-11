@@ -1,0 +1,164 @@
+body{
+	text-align: center;
+	padding: 50px 20px 20px !important;
+	background:linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/Assets/background.jpg);
+  background-position: 0;
+  background-size: cover;
+}
+#wheelOfFortune {
+	display: inline-flex;
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+    border: 8px solid #ef9a12;
+    box-shadow: 0px 0px 23px black;
+  }
+  
+  #wheel {
+	display: block;
+  }
+  
+  #spin {
+	font: 16px sans-serif;
+	user-select: none;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20%;
+	height: 20%;
+	background: #fff !important;
+	color: #ef9a12;
+    box-shadow: 0 0 0 7px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+	border-radius: 50%;
+	transition: 0.8s;
+	transform: translate(-50%, -50%);
+  }
+  .button-container{
+	width: 100%;
+	float: left;
+  }
+  .spin-btn,.swal-button{
+	
+    width: 160px;
+    padding: 12px;
+    background: #ef9a12 !important;
+    border-radius: 8px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+	box-shadow: inset 0px 0px 12px #373737;
+    font-size: 16px;
+    cursor: pointer;
+    border: none !important;
+}
+.spin-btn{
+	margin: 75px 20px;
+}
+.swal-footer{
+	text-align: center;
+}
+
+  #spin::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    width: 0;
+    height: 0;
+    left: 14ppx;
+    border-left: 6px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 22px solid white;
+    left: 19px;
+  }
+
+  .firstStepAnimation{
+	transition: 1s;
+  }
+  .swal-title{
+	font-size: 26px !important;
+  }
+  .swal-modal{
+    background: url(/Assets/celebration.jpg);
+	background-position: 0;
+    background-size: cover;
+    padding: 40px 20px 20px !important;
+  }
+  .swal-overlay{
+	background-color: rgba(0,0,0,0.6) !important;
+  }
+
+.swal-icon.swal-icon--success{
+    display: none !important;
+}
+  @media only screen and (max-width: 600px) {
+	body{
+		padding: 100px 20px 20px !important;
+	}
+  }
+
+  .ShakeAnimation::after {
+    transform: rotate(22deg);
+  }
+  @-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(2px) rotate(-6deg);
+              transform: translateX(2px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(0px) rotate(6deg);
+              transform: translateX(0px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(0px) rotate(-3.6deg);
+              transform: translateX(0px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(0px) rotate(2.4deg);
+              transform: translateX(0px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(0px) rotate(-1.2deg);
+              transform: translateX(0px) rotate(-1.2deg);
+    }
+  }
+  
